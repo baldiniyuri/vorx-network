@@ -19,6 +19,10 @@ resource "aws_subnet" "vorx-subnet-priv-1a" {
 }
 
 
-output "vorx_prod_subnets" {
-value = "aws_subnet.*.id"
+output "vorx_prod_subnet_pub-1a" {
+value = aws_subnet.vorx-subnet-pub-1a.id
+}
+
+output "vorx_prod_subnet_priv-1a" {
+value = aws_subnet.vorx-subnet-priv-1a.id
 }
